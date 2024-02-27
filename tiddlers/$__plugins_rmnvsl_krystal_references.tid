@@ -1,0 +1,20 @@
+created: 20240227063037862
+creator: sicheng
+modified: 20240227063038154
+modifier: sicheng
+tags: $:/tags/ViewTemplate
+title: $:/plugins/rmnvsl/krystal/references
+
+<$list filter="[all[current]backlinks[]!is[system]sort[title]] -[is[current]] +[limit[1]]" variable=none>
+<ul class="krystal-references">
+<li class="krystal-references__title"><strong><$transclude tiddler="$:/plugins/rmnvsl/krystal/referenceshere" field="text" mode="inline" /></strong></li>
+<$list filter="[all[current]backlinks[]!is[system]sort[title]] -[is[current]]">
+<li class="krystal-references__reference">
+<$link>
+<b><$view field="title" /></b>
+<div class="krystal-references__content"><$transclude field="text" mode="inline" /></div>
+</$link>
+</li>
+</$list>
+</ul>
+</$list>
