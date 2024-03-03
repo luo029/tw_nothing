@@ -1,0 +1,15 @@
+created: 20240229105108042
+creator: sicheng
+modified: 20240229112441544
+modifier: sicheng
+tags: 大纲 微青
+title: 成语典
+type: text/vnd.tiddlywiki
+
+\define sv-exclude-tags()  成语典
+
+查找 <$edit-text tiddler="$:/temp/demo/dtable/search" filed=text tag=input default=""/> <$button set="$:/temp/demo/dtable/search" setTo="" tooltip="clear searchbox">x</$button>
+
+
+<$macrocall $name=table-dynamic filter="[tag[成语典] search{$:/temp/demo/dtable/search}]" class="w-100" fields="tbl-expand title caption-zh "  caption="''条目''" />
+
