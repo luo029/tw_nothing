@@ -1,0 +1,14 @@
+created: 20240301072359471
+creator: sicheng
+modified: 20240301114052632
+modifier: sicheng
+tags: 微青 大纲 赤蚁笔记
+title: 毛线团理论
+type: text/vnd.tiddlywiki
+
+\define sv-exclude-tags()  毛线团理论
+
+查找 <$edit-text tiddler="$:/temp/demo/dtable/search" filed=text tag=input default=""/> <$button set="$:/temp/demo/dtable/search" setTo="" tooltip="clear searchbox">x</$button>
+
+
+<$macrocall $name=table-dynamic filter="[tag[毛线团理论] search{$:/temp/demo/dtable/search}]" class="w-100" fields="tbl-expand title tags"  caption="''条目''" />
