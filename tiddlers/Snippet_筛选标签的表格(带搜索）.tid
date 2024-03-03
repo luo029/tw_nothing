@@ -1,0 +1,16 @@
+caption: 筛选标签的表格(带搜索）
+created: 20240229062429714
+creator: sicheng
+description-zh: 根据标签自动生成表格
+modified: 20240229065157701
+modifier: sicheng
+tags: $:/tags/TextEditor/Snippet 存放所有Snippet
+title: Snippet_筛选标签的表格(带搜索）
+type: text/vnd.tiddlywiki
+
+\define sv-exclude-tags()  省略的标签名字
+
+查找 <$edit-text tiddler="$:/temp/demo/dtable/search" filed=text tag=input default=""/> <$button set="$:/temp/demo/dtable/search" setTo="" tooltip="clear searchbox">x</$button>
+
+
+<$macrocall $name=table-dynamic filter="[tag[标签名字] search{$:/temp/demo/dtable/search}]" class="w-100" fields="tbl-expand title tags"  caption="''条目''" />

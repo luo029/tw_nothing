@@ -1,0 +1,13 @@
+created: 20240229113718679
+creator: sicheng
+modified: 20240229113758626
+modifier: sicheng
+tags: 微青 大纲
+title: 自省
+
+\define sv-exclude-tags()  自省
+
+查找 <$edit-text tiddler="$:/temp/demo/dtable/search" filed=text tag=input default=""/> <$button set="$:/temp/demo/dtable/search" setTo="" tooltip="clear searchbox">x</$button>
+
+
+<$macrocall $name=table-dynamic filter="[tag[自省] search{$:/temp/demo/dtable/search}]" class="w-100" fields="tbl-expand title tags"  caption="''条目''" />

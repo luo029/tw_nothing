@@ -1,0 +1,11 @@
+created: 20240229021433258
+creator: sicheng
+modified: 20240229021721352
+modifier: sicheng
+tags: 大纲 Home
+title: 存放所有Snippet
+
+查找 <$edit-text tiddler="$:/temp/demo/dtable/search" filed=text tag=input default=""/> <$button set="$:/temp/demo/dtable/search" setTo="" tooltip="clear searchbox">x</$button>
+
+
+<$macrocall $name=table-dynamic filter="[tag[$:/tags/TextEditor/Snippet] search{$:/temp/demo/dtable/search}]" class="w-100" fields="tbl-expand title description-zh"  caption="''条目''" />

@@ -1,0 +1,14 @@
+created: 20240302073706120
+creator: sicheng
+modified: 20240302075308589
+modifier: sicheng
+tags: 微青 Now
+title: Now_序章
+type: text/vnd.tiddlywiki
+
+\define sv-exclude-tags()  Now_序章
+
+查找 <$edit-text tiddler="$:/temp/demo/dtable/search" filed=text tag=input default=""/> <$button set="$:/temp/demo/dtable/search" setTo="" tooltip="clear searchbox">x</$button>
+
+
+<$macrocall $name=table-dynamic filter="[tag[Now_序章] search{$:/temp/demo/dtable/search}]" class="w-100" fields="tbl-expand title created"  caption="''条目''" />
