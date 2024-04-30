@@ -1,0 +1,55 @@
+created: 20240228100141838
+creator: sicheng
+list-before: $:/core/ui/SideBar/Open
+modified: 20240229025309086
+modifier: sicheng
+tags: Home $:/tags/SideBar
+title: TodoList
+type: text/vnd.tiddlywiki
+
+\define sv-exclude-tags() Task
+
+\define search-box(tempTiddler)
+<$keyboard key="escape" actions="""<$action-setfield $tiddler=<<__tempTiddler__>> $field=text $value=""/>""" >
+<$edit-text tiddler=<<__tempTiddler__>>
+  field=text 	tag=input 	type=search
+	default=""  placeholder=" enter your search terms"
+	class="search-box" />
+</$keyboard>
+\end
+\define tidSearchinTasks()$:/temp/tasks/dtable/search
+\define createTask()<$action-sendmessage $message=tm-new-tiddler tags=Task text="" due=<<now "[UTC]YYYY-0MM-0DD">> description="" status="in-hold" priority=3 />
+\define newTask() <$button actions=<<createTask>>class="btn btn-sm mr-1">大起尘劳</$button>
+
+<div class=float-right>
+<<newTask>>
+</div>
+
+<style>
+.search-box {
+  border:none;
+  border-bottom:1px solid #ccc;
+  outline-style: none;
+  width:20em
+}
+
+.search-box::placeholder {
+  font-size: 0.9em;
+	color: <<color muted-foreground>>
+}
+
+.search-box label{display:block;}
+/* prevent overflow on long links */
+.tc-tiddler-frame table.kk-idea td {word-break: break-word;}
+</style>
+
+查找 <$macrocall label="" tempTiddler=<<tidSearchinTasks>> $name=search-box/><br>
+
+<$let searchTerm={{{[<tidSearchinTasks>get[text]]}}}>
+<$list filter="[<tidSearchinTasks>has[text]]"emptyMessage="<small> All tasks: <$count filter=[tag[Task]]/>"variable=null>
+<small><$count filter="[tag[Task]search<searchTerm>]"/> matches</small>
+</$list>
+<!---->
+
+
+<$macrocall $name=table-dynamic filter="[tag[Task]]" fields="tbl-checkbox tbl-expand title description priority status due tags" class="w-100" stateTiddler="your-state-tid"/>
