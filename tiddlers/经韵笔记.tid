@@ -1,0 +1,25 @@
+created: 20240317104331499
+creator: sicheng
+modified: 20240317111233967
+modifier: sicheng
+tags: 大纲笔记
+title: 经韵笔记
+type: text/vnd.tiddlywiki
+
+! [[转音]]:
+
+查找 <$edit-text tiddler="$:/temp/demo/dtable/search" filed=text tag=input default=""/> <$button set="$:/temp/demo/dtable/search" setTo="" tooltip="clear searchbox">x</$button>
+
+<$macrocall $name=table-dynamic filter="[tag[转音]]" class="w-100" fields="tbl-expand title caption-zh" caption="''条目''" />
+
+! [[法器]]:
+
+查找 <$edit-text tiddler="$:/temp/demo/dtable/search" filed=text tag=input default=""/> <$button set="$:/temp/demo/dtable/search" setTo="" tooltip="clear searchbox">x</$button>
+
+<$macrocall $name=table-dynamic filter="[tag[法器]]" class="w-100" fields="tbl-expand title caption-zh" caption="''条目''" />
+
+! [[其他]]:
+
+查找 <$edit-text tiddler="$:/temp/demo/dtable/search" filed=text tag=input default=""/> <$button set="$:/temp/demo/dtable/search" setTo="" tooltip="clear searchbox">x</$button>
+
+<$macrocall $name=table-dynamic filter="[tag[经韵]]" class="w-100" fields="tbl-expand title caption-zh" caption="''条目''" />
